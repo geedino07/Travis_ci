@@ -15,8 +15,8 @@ before_script:
 
 script:
   - docker --version # print teh version for logging
-  - docker build -t simple-node-t .
-  - docker tag simple-node-t geedino07/simple-node .
+  - docker build -t simple-node .
+  - docker tag simple-node geedino07/simple-node .
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
